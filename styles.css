@@ -1,19 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
 @font-face {
     font-family: "consola";
-    src: url(/fonts/CONSOLA.TTF);
+    src: url(CONSOLA.TTF);
     font-weight: bold;
     font-style: bold;
 }
 html, body {
     display: flex;
     overflow: hidden;
-    text-align: justify;
     align-items: center;
     justify-content: center;
     height: 100%;
     margin: 0;
 }
+#checkboxContainer 
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 2vh;
+    font-family: 'Consola';
+}
 
+#toggleCheckbox 
+{
+    margin-right: 5px; /* Ajusta el espacio entre el checkbox y el texto según tus necesidades */
+}
+input[type="Checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 3px solid white;
+    border-radius: 25%;
+    outline: none;
+    margin-right: 10px;
+    transition: transform 0.3s ease; /* Añade transición a la propiedad transform */
+}
+
+/* Estilo cuando el radio está marcado */
+input[type="Checkbox"]:checked 
+{
+    background-color: gray;
+    border-color: white;
+    color: white;
+    transform: rotate(360deg) scale(1.2); /* Añade rotación y cambio de tamaño */
+}
 body 
 {
     background-color:#20232A;
@@ -24,10 +61,12 @@ body
     padding: 5vw;
     text-align: center;
     color: white;
+    max-width: 800px; /* Establece el ancho máximo del contenedor */
+    margin: 0 auto;
 }
 
 form {
-    text-align: justify;
+    text-align: left;
 }
 
 input[type="radio"] {
@@ -45,7 +84,8 @@ input[type="radio"] {
 }
 
 /* Estilo cuando el radio está marcado */
-input[type="radio"]:checked {
+input[type="radio"]:checked 
+{
     background-color: gray;
     border-color: white;
     color: white;
@@ -93,10 +133,10 @@ button:hover
     }
 
     h1 {
-        font-size: 1.5vh; /* Ajusta el tamaño del texto para pantallas pequeñas */
+        font-size: 3vh; /* Ajusta el tamaño del texto para pantallas pequeñas */
     }
     button {
-        font-size: 3vw;
+        font-size: 3.5vw;
         padding: 1vh 2vw;
     }
     #titulo
@@ -108,16 +148,25 @@ button:hover
         width: 20px;
         height: 20px;
     }
+    input[type="Checkbox"]
+    {
+        width: 20px;
+        height: 20px;
+    }
+    #checkboxContainer 
+    {
+        font-size: 1.3vh;
+    }
 }
 
 /* Reglas de medios para pantallas medianas */
 @media screen and (min-width: 481px) and (max-width: 800px) {
     #contenedor {
-        width: 90%; /* Ajusta el ancho del contenedor para pantallas medianas */
+        width: 95%; /* Ajusta el ancho del contenedor para pantallas medianas */
     }
 
     h1 {
-        font-size: 2vh; /* Ajusta el tamaño del texto para pantallas medianas */
+        font-size: 4vh; /* Ajusta el tamaño del texto para pantallas medianas */
     }
     button {
         font-size: 3vw;
@@ -129,8 +178,17 @@ button:hover
     }
     input[type="radio"]
     {
+        width: 25px;
+        height: 25px;
+    }
+    input[type="Checkbox"]
+    {
         width: 20px;
         height: 20px;
+    }
+    #checkboxContainer 
+    {
+        font-size: 2vh;
     }
 }
 
