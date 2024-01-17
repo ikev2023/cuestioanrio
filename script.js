@@ -1,21 +1,16 @@
 let cont = 0;
 const audioElement = new Audio("Snapback.mp3")
-reproducirEnBucle(audioElement);
-document.addEventListener("DOMContentLoaded", function() 
-{
+document.addEventListener("DOMContentLoaded", function() {
     const checkbox = document.getElementById("toggleCheckbox");
 
     // Evento al cambiar el estado del checkbox
-    checkbox.addEventListener("change", function() 
-    {
-        if (this.checked) 
-        {
-            // Si está marcado, pausar la música
-            audioElement.pause();
-        } else 
-        {
-            // Si no está marcado, reanudar la música
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            // Si está marcado, iniciar la música
             audioElement.play();
+        } else {
+            // Si no está marcado, pausar la música
+            audioElement.pause();
         }
     });
 });
