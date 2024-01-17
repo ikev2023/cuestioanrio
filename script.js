@@ -6,8 +6,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Evento al cambiar el estado del checkbox
     checkbox.addEventListener("change", function() {
         if (this.checked) {
-            // Si está marcado, iniciar la música
+            // Si está marcado, iniciar la música y repetirla en bucle
             audioElement.play();
+            reproducirEnBucle(audioElement);
         } else {
             // Si no está marcado, pausar la música
             audioElement.pause();
